@@ -41,14 +41,12 @@ return (
                     </div>
                     <div className="row">
                             {isLoading ? (
-                                    // Render placeholder components when API is still loading
                                     <>
                                             {Array.from({ length: 10 }).map((_, index) => (
                                                     <NewsCardItem isPlaceholder newsItem={null} index={index} />
                                             ))}
                                     </>
                             ) : (
-                                    // Render actual news items when API has returned data
                                     news.slice(0, 20).map((item, index) => (
                                             <NewsCardItem  newsItem={item} index={index} />
                                     ))
