@@ -46,9 +46,9 @@ export function validateCategory(categoryParam: string | null): Category | null 
 
 export const properNews = (news: News[]) => {
     return news.filter(item => (
-        item.content && !item.content.includes('[Removed]') ||
-        item.title && !item.title.includes('[Removed]') && item.title.split(' ').length <= 10 ||
-        item.description && !item.description.includes('[Removed]') && item.description.split(' ').length <= 50
+        item.content && !item.content.includes('[Removed]') && item.content.length > 50 &&
+        item.title && !item.title.includes('[Removed]') && item.title.length > 10 &&
+        item.description && !item.description.includes('[Removed]') && item.description.length > 50
     ));
 };
 

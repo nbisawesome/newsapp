@@ -3,7 +3,7 @@ import BaseApiRequest from "./baseapi";
 
 export type Category = "business" | "entertainment" | "general" | "health" | "science" | "sports" | "technology";
 const BASE_URL = import.meta.env.VITE_BASE_URL;
-const API_KEY = import.meta.env.VITE_API_KEY; // Use the API key from the environment
+const API_KEY = import.meta.env.VITE_API_KEY; 
 const api = new BaseApiRequest(BASE_URL);
 
 export async function getLatestNews(): Promise<News[]> {
